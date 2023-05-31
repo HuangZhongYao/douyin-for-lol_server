@@ -6,7 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
-import org.smog.lol.entity.base.AbstractEntity;
+import org.smog.lol.entity.base.BaseEntity;
 
 /**
  * 资源实体类
@@ -21,7 +21,7 @@ import org.smog.lol.entity.base.AbstractEntity;
 @NoArgsConstructor
 @EqualsAndHashCode(callSuper = false)
 @TableName("video_resources")
-public class ResourceEntity extends AbstractEntity {
+public class ResourceEntity extends BaseEntity {
 
     /**
      * 标题
@@ -33,5 +33,9 @@ public class ResourceEntity extends AbstractEntity {
      */
     private String path;
 
+    /**
+     * 描述
+     */
+    private String remark;
 
 }

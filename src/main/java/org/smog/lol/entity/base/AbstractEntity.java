@@ -26,5 +26,5 @@ public abstract class AbstractEntity implements IEntity, Serializable {
      * 主键ID
      */
     @TableField
-    private String id;
+    private Long id;
 }
