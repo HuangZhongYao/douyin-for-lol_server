@@ -1,5 +1,6 @@
 package org.smog.lol.entity.base;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import java.io.Serializable;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -24,5 +25,6 @@ public abstract class AbstractEntity implements IEntity, Serializable {
     /**
      * 主键ID
      */
+    @TableField
     private String id;
 }

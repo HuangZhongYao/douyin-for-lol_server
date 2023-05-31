@@ -1,5 +1,6 @@
 package org.smog.lol.entity;
 
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.*;
 import org.smog.lol.entity.base.AbstractEntity;
 
@@ -14,5 +15,8 @@ import org.smog.lol.entity.base.AbstractEntity;
 @ToString
 @NoArgsConstructor
 @EqualsAndHashCode(callSuper = false)
+@TableName("video_resources")
 public class ResourceEntity extends AbstractEntity {
+
+
 }

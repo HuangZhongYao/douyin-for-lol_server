@@ -26,9 +26,24 @@
         <maven.compiler.source>20</maven.compiler.source>
         <third.hutoll.version>5.8.16</third.hutoll.version>
         <third.lombok.verison>1.18.28</third.lombok.verison>
+        <third.mybatis-plus.verison>3.5.3</third.mybatis-plus.verison>
+        <third.mysql.version>8.0.32</third.mysql.version>
     </properties>
 
     <dependencies>
+
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>${third.mybatis-plus.verison}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${third.mysql.version}</version>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
