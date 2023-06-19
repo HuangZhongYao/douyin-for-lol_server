@@ -1,17 +1,15 @@
-package org.smog.lol.core.base.dto;
+package org.smog.lol.service.dto;
 
-import java.io.Serializable;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
+import org.smog.lol.core.base.dto.BaseQueryPageDTO;
 
 /**
- * DTO 基类
- *
  * @Desc Created by IntelliJ IDEA.
- * @Time 2023-06-01 10:34
+ * @Time 2023-06-19 9:51
  * @Author ZhongYao.Huang
  */
 @Setter
@@ -19,6 +17,11 @@ import lombok.ToString;
 @ToString
 @NoArgsConstructor
 @EqualsAndHashCode(callSuper = false)
-public class BaseDTO implements Serializable {
-    private static final long serialVersionUID = -4135734847131367564L;
+public class ResourcePageListInputDTO extends BaseQueryPageDTO {
+
+    /**
+     * 查询内容
+     */
+    String content;
+
 }

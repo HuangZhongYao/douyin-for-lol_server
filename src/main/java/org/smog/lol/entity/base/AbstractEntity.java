@@ -8,6 +8,7 @@ import lombok.Setter;
 
 /**
  * 抽象实体基类
+ *
  * @Desc Created by IntelliJ IDEA.
  * @Time 2023-05-31 11:06
  * @Author ZhongYao.Huang

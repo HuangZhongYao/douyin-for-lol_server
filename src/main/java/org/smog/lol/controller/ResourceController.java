@@ -1,11 +1,10 @@
 package org.smog.lol.controller;
 
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.baomidou.mybatisplus.core.toolkit.Wrappers;
-import lombok.*;
-import org.smog.lol.core.base.dto.BaseQueryPageDTO;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import lombok.AllArgsConstructor;
 import org.smog.lol.entity.ResourceEntity;
-import org.smog.lol.repository.IResourceRepository;
+import org.smog.lol.service.IResourceService;
+import org.smog.lol.service.dto.ResourcePageListInputDTO;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -23,10 +22,17 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/resource")
 public class ResourceController {
 
-    IResourceRepository resourceRepository;
-    @PostMapping(value = "/pageList",consumes = MediaType.APPLICATION_JSON_VALUE,produces =MediaType.APPLICATION_JSON_VALUE )
+    IResourceService resourceService;
+
+    /**
+     * 分页查询视频资源接口
+     *
+     * @param input
+     * @return
+     */
+    @PostMapping(value = "/pageList", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     @CrossOrigin
-    public Object resourcePageList(@RequestBody BaseQueryPageDTO input){
-        return resourceRepository.selectPage(input.toMybatisPage(),null);
+    public IPage<ResourceEntity> resourcePageList(@RequestBody ResourcePageListInputDTO input) {
+        return resourceService.resourcePageList(input);
     }
 }
