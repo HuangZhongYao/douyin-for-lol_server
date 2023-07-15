@@ -3,12 +3,9 @@ package org.smog.lol.service.impl;
 import cn.hutool.core.util.StrUtil;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
+import javax.annotation.Resource;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
 import org.smog.lol.entity.ResourceEntity;
 import org.smog.lol.repository.IResourceRepository;
 import org.smog.lol.service.IResourceService;
@@ -21,14 +18,11 @@ import org.springframework.stereotype.Service;
  * @Author ZhongYao.Huang
  */
 @Service
-@Setter
-@Getter
-@ToString
-@NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = false)
 public class ResourceServiceImpl implements IResourceService {
 
+    @Resource
     IResourceRepository resourceRepository;
 
     @Override
