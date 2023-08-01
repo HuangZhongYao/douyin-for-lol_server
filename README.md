@@ -15,7 +15,8 @@
 
 1.  clone 项目到IDEA 中打开
 2.  创建数据库，库名 lol、字符集 utf8mb4、排序规则 utf8mb4_general_ci
-3.  修改配置文件数据源信息
+3.  执行 doc/sql/lol.sql 
+4.  修改配置文件数据源信息
 4.  启动后端项目
 5.  在HBuilder中运行前端项目到chrome浏览器
 6.  使用手机访问项目或者浏览器调成移动设备模式
